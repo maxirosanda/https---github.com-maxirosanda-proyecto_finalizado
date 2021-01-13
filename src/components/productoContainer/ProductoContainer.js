@@ -14,7 +14,7 @@ const ProductoContainer = () => {
         setCantidad(cantidad - 1)
     }
     return <>
-<Producto mstock = {stock} cantidad = {cantidad} bajarCantidad ={ bajarCantidad}   subirCantidad ={ subirCantidad}></Producto>
+<Producto  cantidad = {cantidad} bajarCantidad ={ bajarCantidad}   subirCantidad ={ subirCantidad}></Producto>
     </>
   }
   

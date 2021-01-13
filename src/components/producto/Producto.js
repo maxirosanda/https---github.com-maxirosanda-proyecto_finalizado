@@ -1,6 +1,6 @@
 import FotoProducto from '../../assets/producto.jpg'
 
-const Producto = ({cantidad, stock, bajarCantidad,subirCantidad}) => {
+const Producto = ({cantidad,bajarCantidad,subirCantidad}) => {
     return <>
 <div className="row container mt-5 ml-5 ">
 <div className="card-body col-3 ">
