@@ -12,7 +12,7 @@ const Producto = ({cantidad,bajarCantidad,subirCantidad}) => {
 						  <div className="input-group-prepend">
 						    <button onClick = {subirCantidad} className="btn btn-light" type="button" id="button-plus"> + </button>
 						  </div>
-						  <input type="text" className="form-control" value={cantidad}/>
+						  <input type="text" className="form-control" defaultValue={cantidad}/>
 						  <div className="input-group-append">
 						    <button onClick = {bajarCantidad} className="btn btn-light" type="button" id="button-minus"> − </button>
 						  </div>
@@ -20,7 +20,7 @@ const Producto = ({cantidad,bajarCantidad,subirCantidad}) => {
 					</div> 
 					
                     <div className="form-group col-6 ml-5 mt-2 ">
-						<a href="#" className="btn btn-primary "> <span className="text">Add to cart</span> <i class="fas fa-shopping-cart"></i> </a>
+						<a href="#" className="btn btn-primary "> <span className="text">Add to cart</span> <i className ="fas fa-shopping-cart"></i> </a>
 					</div>
 				</div> 
                 </div>
