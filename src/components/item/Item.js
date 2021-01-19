@@ -1,19 +1,8 @@
 
-const Item = (datos) => {
-     console.log(datos)
-    return (
-      <div>
-        <h1>Productos </h1>
-      <ul>
-      {
-     datos.map((item,indice) => {
-       return <li key={indice}>{item.name} : $ {item.precio} </li>
-    }
-     )
-     
-      }
-      </ul>
-      </div>
-      )
+const Item = ({item}) => {
+  
+ return <>
+<h2  >{item.name} : ${item.precio} </h2>
+ </>
 }
-  export default Item
+export default Item
