@@ -11,7 +11,7 @@ const Item = ({item}) => {
     <Card.Text>
       El precio del producto es de $  {item.precio} y puede abonarlo en 18 cuotas sin interes con todas las tarjetas de credito
     </Card.Text>
-   <Link to={ `./item/${item.id}`}> <Button variant="primary">Comprar</Button></Link>
+   <Link to={ `/item/${item.id}`}> <Button variant="primary">Comprar</Button></Link>
   </Card.Body>
 </Card>
  </>

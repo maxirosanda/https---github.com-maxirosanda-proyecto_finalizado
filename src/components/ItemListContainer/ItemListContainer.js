@@ -1,4 +1,4 @@
-import ItemList from '../itemList/itemList'
+import ItemList from '../itemList/ItemList'
 import { useState , useEffect } from "react";
 import ItemDetailContainer from '../itemDetailContainer/ItemDetailContainer';
 import { useParams } from "react-router-dom";
@@ -30,7 +30,7 @@ const ItemListContainer = ({}) => {
             id: 2, 
             name: 'Procesador gamer AMD Ryzen 3 3200Gn',
             precio: 14729, 
-            stock: 5,
+            stock: 0,
             id_categoria:"2",
             img:"https://i.ibb.co/C15sDvz/procesador1.jpg",
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ex ac est pulvinar varius. Curabitur sit amet dolor convallis, feugiat ligula sed, mollis dui. Maecenas convallis sapien ut tellus faucibus egestas. Suspendisse laoreet hendrerit mauris id malesuada. Nulla et nisi malesuada, mollis arcu eget, malesuada erat. Etiam est massa, rutrum non purus ut, pharetra dictum sapien. Morbi et condimentum nisl, eu faucibus tellus. Suspendisse sagittis molestie dignissim. Maecenas iaculis leo sed magna rutrum tristique. Curabitur in facilisis ligula. Sed bibendum arcu ut urna consequat, quis scelerisque est sollicitudin. Nam molestie placerat diam, vel venenatis ex luctus ac. Sed vitae tincidunt est."
@@ -94,7 +94,7 @@ const ItemListContainer = ({}) => {
 
 useEffect(() =>{
     
-    const findItems = new Promise((resolve, reject) => {
+    const findItems = new Promise((resolve) => {
         setTimeout(() => {
             
             arreglo.length ? resolve(arreglo) : resolve("no hay items")

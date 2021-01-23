@@ -1,22 +1,24 @@
-import {Button,Container,Row,Col,Image,C} from 'react-bootstrap'
-
+import {Container,Row,Col,Image} from 'react-bootstrap'
+import ProductoContainer from '../productoContainer/ProductoContainer'
+import './ItemDetail.css'
 const ItemDetail = ({item}) => {
  return <>
- <Container fluid >
+ <Container fluid className="mb-20 mt-5" >
    
-<Row style={{ width: '18rem' }}> 
-  <Col xs={6} >
-    <Image fluid variant="top"  src={item.img} />
+<Row> 
+  <Col xs={6} className="row justify-content-center" >
+    <Image fluid  className="rounded"  src={item.img} />
   </Col>  
-  <Col xs={6} >
-    {item.name}
+  <Col xs={6} className=" align-self-center" >
+   <h2 className="text-center"> {item.name}</h2>   
   </Col>  
 </Row>
 <Row>
   <Col>
-    <Row>
-      <Col>Nuestro producto tiene un precio de ${item.precio} y lo podes pagar en 18 cuaotas sin interes</Col>
-      <Col ><Button variant="primary">Comprar</Button></Col>
+    <Row >
+      <Col xs={12} className="mt-4" ><h2 className="text-center ">Precio ${item.precio}</h2></Col>
+      <Col xs={12} className="my-4  row justify-content-center" ><ProductoContainer stock={item.stock} ></ProductoContainer></Col>
+      
     </Row>
   </Col>
   <Col>

@@ -1,6 +1,6 @@
 import './App.css'
 import NavBar from './components/navbar/NavBar'
-import FooTer from './components/footer/FooTer'
+import Footer from './components/footer/Footer'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import {Switch, Route, BrowserRouter } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ function App() {
                         <Route exact path='/category/:categoryId' component={ItemListContainer} />
                         <Route  path='/' component={ItemListContainer} />
                 </Switch>
-                <FooTer/>
+                <Footer/>
         </BrowserRouter>   
         </>
 }
