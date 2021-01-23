@@ -1,17 +1,26 @@
 import Item from '../item/Item'
+import { useParams } from "react-router-dom";
 const ItemList= ({items}) => {
-   
-
-
-
-    return <>
-      {
-          
-          items.length && items.map((item) => {
-    return <Item key = {item.id} item = {item} > </Item>
- })
+  const {categoryId}  = useParams() 
+  console.log(categoryId)
+    return <> 
   
-}</>
+      <div className="container-fluid row m-0 p-0 px-3">
+      {
+       
+    items.length && items.map((item) => {
+      if(categoryId){
+
+      if(item.id_categoria == parseFloat(categoryId)){
+          return <Item key = {item.id} item = {item} > </Item> }else{}
+        }else{
+      return <Item key = {item.id} item = {item} > </Item>
+
+    }
+ })
+     }
+     </div>
+  </>
   }
   
   export default ItemList 
