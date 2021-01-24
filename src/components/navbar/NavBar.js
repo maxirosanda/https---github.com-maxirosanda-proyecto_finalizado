@@ -17,7 +17,6 @@ const NavBar = () => {
         <NavDropdown.Item ><Link style={{color: "#232020", textDecoration: 'none'}} className="link" to={'/category/2'}>Procesadores</Link></NavDropdown.Item>
         <NavDropdown.Item ><Link style={{color: "#232020", textDecoration: 'none'}} className="link" to={ '/category/3'}>Placa de video</Link></NavDropdown.Item>
         <NavDropdown.Item ><Link style={{color: "#232020", textDecoration: 'none'}} className="link" to={ '/category/4'}>Fuentes</Link></NavDropdown.Item>
-        <NavDropdown.Item ><Link style={{color: "#232020", textDecoration: 'none'}} className="link" to={ '/category/4'}>Fuentes</Link></NavDropdown.Item>
         <NavDropdown.Item ><Link style={{color: "#232020", textDecoration: 'none'}} className="link" to={ '/category/5'}>Gabinetes</Link></NavDropdown.Item>
         <NavDropdown.Item ><Link style={{color: "#232020", textDecoration: 'none'}} className="link" to={ '/category/6'}>Discos de almacenamiento</Link></NavDropdown.Item>
         <NavDropdown.Item ><Link style={{color: "#232020", textDecoration: 'none'}} className="link" to={ '/'}>Todas</Link></NavDropdown.Item>
