@@ -16,7 +16,7 @@ function App() {
             path="/category/:categoryId"
             component={ItemListContainer}
           />
-          <Route path="/" component={ItemListContainer} />
+          <Route path="/" component={ItemListContainer} />{" "}
         </Switch>
         <Footer />
       </BrowserRouter>
