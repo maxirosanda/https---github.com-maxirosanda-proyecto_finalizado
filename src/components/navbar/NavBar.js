@@ -1,6 +1,6 @@
 import { Navbar ,Nav,NavDropdown } from 'react-bootstrap'
 import './NavBar.css'
-import CardWidget from '../cardwidget/CardWidget'
+import CardWidget from '../CardWidget/CardWidget'
 import { Link }  from 'react-router-dom'
 const NavBar = () => {
     return <>

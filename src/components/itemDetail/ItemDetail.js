@@ -1,5 +1,5 @@
 import {Container,Row,Col,Image} from 'react-bootstrap'
-import ContadorContainer from '../contadorContainer/ContadorContainer'
+import ContadorContainer from '../ContadorContainer/ContadorContainer'
 import './ItemDetail.css'
 const ItemDetail = ({item}) => {
  return <>

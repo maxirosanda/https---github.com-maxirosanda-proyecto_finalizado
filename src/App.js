@@ -1,6 +1,6 @@
 import './App.css'
-import NavBar from './components/navbar/NavBar'
-import Footer from './components/footer/Footer'
+import NavBar from './components/Navbar/NavBar'
+import Footer from './components/Footer/Footer'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import {Switch, Route, BrowserRouter } from 'react-router-dom';
 

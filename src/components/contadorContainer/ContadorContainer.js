@@ -1,4 +1,4 @@
-import Producto from '../contador/Contador'
+import Producto from '../Contador/Contador'
 
 import { useState } from "react";
 const ContadorContainer = ({stock}) => {
