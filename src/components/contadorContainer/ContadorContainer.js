@@ -1,7 +1,7 @@
 import Producto from '../contador/Contador'
 
 import { useState } from "react";
-const ProductoContainer = ({stock}) => {
+const ContadorContainer = ({stock}) => {
     let inicial =1
     const [cantidad , setCantidad] = useState(inicial)
     const [maximo] = useState(stock)
@@ -24,6 +24,6 @@ const ProductoContainer = ({stock}) => {
 }
   }
   
-  export default ProductoContainer
+  export default ContadorContainer
 
 

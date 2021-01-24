@@ -1,24 +1,25 @@
 import {Button , Col } from 'react-bootstrap'
-const Producto = ({cantidad,bajarCantidad,subirCantidad}) => {
+const Contador = ({cantidad,bajarCantidad,subirCantidad}) => {
 	console.log(cantidad)
 	return <>
             
 
-						  <Col xs={2} className=" row justify-content-center align-self-center" >
-						    	<Button onClick = {subirCantidad} className="btn btn-light" type="button" id="button-plus"> + </Button>
+						  <Col xs={4} md={4} lg={3} xl={2} className=" row justify-content-center align-self-center" >
+						    	<Button onClick = {subirCantidad} className="btn btn-light"><Col>+</Col></Button>
 						   </Col >
-						  <Col xs={2} className=" row justify-content-center align-self-center">
+						  <Col xs={4} md={3} lg={3} xl={2} className=" row justify-content-center align-self-center">
 						  		<h2>{cantidad}</h2>
 						  </Col>
-						  <Col xs={2} className=" mr-3 row justify-content-center align-self-center" >
-						    <Button onClick = {bajarCantidad} className="btn btn-light" type="button" id="button-minus"> − </Button>
-						  </Col>
-						  <Col xs={2} className="mr-3 row justify-content-center align-self-center">
+						  <Col xs={4} md={4} lg={3} xl={2} className=" row justify-content-center align-self-center" >
+						    	<Button onClick = {bajarCantidad} className="btn btn-light"><Col>-</Col></Button>
+						   </Col >
+						  
+						  <Col xs={3} md={3} lg={3} xl={3} className=" my-4 row justify-content-center align-self-center">
 						  <Button className=" row justify-content-center align-self-center" >Carrito</Button>
 						  </Col>
-						  <Col  xs={3}  className="row  align-self-center justify-content-center"><Button>Comprar</Button></Col>
+						  <Col  xs={3} md={3} lg={3} xl={3}  className="my-4 row  align-self-center justify-content-center"><Button>Comprar</Button></Col>
 	
     </>
   }
   
-  export default Producto
+  export default Contador

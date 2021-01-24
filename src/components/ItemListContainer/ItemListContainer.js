@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 const ItemListContainer = ({}) => {
 
     const  {id}  = useParams()
-
+  
     const [items , setItems] = useState({})
     const arreglo = [
         {
@@ -14,7 +14,7 @@ const ItemListContainer = ({}) => {
             precio: 15749, 
             stock: 4,
             id_categoria:"1",
-            img:"https://i.ibb.co/TBtKHtp/motherboard1.png",
+            img:"https://i.ibb.co/VTc4nsJ/motherboard1.jpg",
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ex ac est pulvinar varius. Curabitur sit amet dolor convallis, feugiat ligula sed, mollis dui. Maecenas convallis sapien ut tellus faucibus egestas. Suspendisse laoreet hendrerit mauris id malesuada. Nulla et nisi malesuada, mollis arcu eget, malesuada erat. Etiam est massa, rutrum non purus ut, pharetra dictum sapien. Morbi et condimentum nisl, eu faucibus tellus. Suspendisse sagittis molestie dignissim. Maecenas iaculis leo sed magna rutrum tristique. Curabitur in facilisis ligula. Sed bibendum arcu ut urna consequat, quis scelerisque est sollicitudin. Nam molestie placerat diam, vel venenatis ex luctus ac. Sed vitae tincidunt est."
         },
          {
@@ -23,7 +23,7 @@ const ItemListContainer = ({}) => {
             precio: 7659, 
             stock: 8,
             id_categoria:"1",
-            img:"https://i.ibb.co/Xy14Cgp/motherboard2.jpg",
+            img:"https://i.ibb.co/LkjvVRH/motherboard2.jpg",
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ex ac est pulvinar varius. Curabitur sit amet dolor convallis, feugiat ligula sed, mollis dui. Maecenas convallis sapien ut tellus faucibus egestas. Suspendisse laoreet hendrerit mauris id malesuada. Nulla et nisi malesuada, mollis arcu eget, malesuada erat. Etiam est massa, rutrum non purus ut, pharetra dictum sapien. Morbi et condimentum nisl, eu faucibus tellus. Suspendisse sagittis molestie dignissim. Maecenas iaculis leo sed magna rutrum tristique. Curabitur in facilisis ligula. Sed bibendum arcu ut urna consequat, quis scelerisque est sollicitudin. Nam molestie placerat diam, vel venenatis ex luctus ac. Sed vitae tincidunt est."
         },
         {
@@ -32,7 +32,7 @@ const ItemListContainer = ({}) => {
             precio: 14729, 
             stock: 0,
             id_categoria:"2",
-            img:"https://i.ibb.co/C15sDvz/procesador1.jpg",
+            img:"https://i.ibb.co/hVT6S0V/procesador1.jpg",
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ex ac est pulvinar varius. Curabitur sit amet dolor convallis, feugiat ligula sed, mollis dui. Maecenas convallis sapien ut tellus faucibus egestas. Suspendisse laoreet hendrerit mauris id malesuada. Nulla et nisi malesuada, mollis arcu eget, malesuada erat. Etiam est massa, rutrum non purus ut, pharetra dictum sapien. Morbi et condimentum nisl, eu faucibus tellus. Suspendisse sagittis molestie dignissim. Maecenas iaculis leo sed magna rutrum tristique. Curabitur in facilisis ligula. Sed bibendum arcu ut urna consequat, quis scelerisque est sollicitudin. Nam molestie placerat diam, vel venenatis ex luctus ac. Sed vitae tincidunt est."
         },
         {
@@ -41,7 +41,7 @@ const ItemListContainer = ({}) => {
             precio: 14800, 
             stock: 4,
             id_categoria:"2",
-            img:"https://i.ibb.co/61JrKX0/procesador2.jpg",
+            img:"https://i.ibb.co/CQcgNgN/procesador2.jpg",
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ex ac est pulvinar varius. Curabitur sit amet dolor convallis, feugiat ligula sed, mollis dui. Maecenas convallis sapien ut tellus faucibus egestas. Suspendisse laoreet hendrerit mauris id malesuada. Nulla et nisi malesuada, mollis arcu eget, malesuada erat. Etiam est massa, rutrum non purus ut, pharetra dictum sapien. Morbi et condimentum nisl, eu faucibus tellus. Suspendisse sagittis molestie dignissim. Maecenas iaculis leo sed magna rutrum tristique. Curabitur in facilisis ligula. Sed bibendum arcu ut urna consequat, quis scelerisque est sollicitudin. Nam molestie placerat diam, vel venenatis ex luctus ac. Sed vitae tincidunt est."
         },
          {
@@ -50,7 +50,7 @@ const ItemListContainer = ({}) => {
             precio: 13400, 
             stock: 8,
             id_categoria:"3",
-            img:"https://i.ibb.co/gVDGM2W/placavideo1.jpg",
+            img:"https://i.ibb.co/bPJLDD3/placavideo1.jpg",
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ex ac est pulvinar varius. Curabitur sit amet dolor convallis, feugiat ligula sed, mollis dui. Maecenas convallis sapien ut tellus faucibus egestas. Suspendisse laoreet hendrerit mauris id malesuada. Nulla et nisi malesuada, mollis arcu eget, malesuada erat. Etiam est massa, rutrum non purus ut, pharetra dictum sapien. Morbi et condimentum nisl, eu faucibus tellus. Suspendisse sagittis molestie dignissim. Maecenas iaculis leo sed magna rutrum tristique. Curabitur in facilisis ligula. Sed bibendum arcu ut urna consequat, quis scelerisque est sollicitudin. Nam molestie placerat diam, vel venenatis ex luctus ac. Sed vitae tincidunt est."
         },
         {
@@ -59,7 +59,7 @@ const ItemListContainer = ({}) => {
             precio: 22300, 
             stock: 5,
             id_categoria:"3",
-            img:"https://i.ibb.co/vHgdqst/placavideo2.jpg",
+            img:"https://i.ibb.co/5xNnM6X/placavideo2.jpg",
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ex ac est pulvinar varius. Curabitur sit amet dolor convallis, feugiat ligula sed, mollis dui. Maecenas convallis sapien ut tellus faucibus egestas. Suspendisse laoreet hendrerit mauris id malesuada. Nulla et nisi malesuada, mollis arcu eget, malesuada erat. Etiam est massa, rutrum non purus ut, pharetra dictum sapien. Morbi et condimentum nisl, eu faucibus tellus. Suspendisse sagittis molestie dignissim. Maecenas iaculis leo sed magna rutrum tristique. Curabitur in facilisis ligula. Sed bibendum arcu ut urna consequat, quis scelerisque est sollicitudin. Nam molestie placerat diam, vel venenatis ex luctus ac. Sed vitae tincidunt est."
         },
         {
@@ -68,7 +68,7 @@ const ItemListContainer = ({}) => {
             precio: 9000, 
             stock: 4,
             id_categoria:"4",
-            img:"https://i.ibb.co/h8njv1D/fuente1.jpg",
+            img:"https://i.ibb.co/803Qw5t/fuente1.jpg",
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ex ac est pulvinar varius. Curabitur sit amet dolor convallis, feugiat ligula sed, mollis dui. Maecenas convallis sapien ut tellus faucibus egestas. Suspendisse laoreet hendrerit mauris id malesuada. Nulla et nisi malesuada, mollis arcu eget, malesuada erat. Etiam est massa, rutrum non purus ut, pharetra dictum sapien. Morbi et condimentum nisl, eu faucibus tellus. Suspendisse sagittis molestie dignissim. Maecenas iaculis leo sed magna rutrum tristique. Curabitur in facilisis ligula. Sed bibendum arcu ut urna consequat, quis scelerisque est sollicitudin. Nam molestie placerat diam, vel venenatis ex luctus ac. Sed vitae tincidunt est."
         },
          {
@@ -77,7 +77,7 @@ const ItemListContainer = ({}) => {
             precio: 7480, 
             stock: 8,
             id_categoria:"5",
-            img:"https://i.ibb.co/pwSMZwk/gabinete1.jpg",
+            img:"https://i.ibb.co/2FCsVK3/gabinete1.jpg",
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ex ac est pulvinar varius. Curabitur sit amet dolor convallis, feugiat ligula sed, mollis dui. Maecenas convallis sapien ut tellus faucibus egestas. Suspendisse laoreet hendrerit mauris id malesuada. Nulla et nisi malesuada, mollis arcu eget, malesuada erat. Etiam est massa, rutrum non purus ut, pharetra dictum sapien. Morbi et condimentum nisl, eu faucibus tellus. Suspendisse sagittis molestie dignissim. Maecenas iaculis leo sed magna rutrum tristique. Curabitur in facilisis ligula. Sed bibendum arcu ut urna consequat, quis scelerisque est sollicitudin. Nam molestie placerat diam, vel venenatis ex luctus ac. Sed vitae tincidunt est."
          },
         {
@@ -86,7 +86,7 @@ const ItemListContainer = ({}) => {
             precio: 3500, 
             stock: 5,
             id_categoria:"6" ,
-            img:"https://i.ibb.co/HHHzBjy/disco.jpg",
+            img:"https://i.ibb.co/SJjMHpP/disco.jpg",
             descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ex ac est pulvinar varius. Curabitur sit amet dolor convallis, feugiat ligula sed, mollis dui. Maecenas convallis sapien ut tellus faucibus egestas. Suspendisse laoreet hendrerit mauris id malesuada. Nulla et nisi malesuada, mollis arcu eget, malesuada erat. Etiam est massa, rutrum non purus ut, pharetra dictum sapien. Morbi et condimentum nisl, eu faucibus tellus. Suspendisse sagittis molestie dignissim. Maecenas iaculis leo sed magna rutrum tristique. Curabitur in facilisis ligula. Sed bibendum arcu ut urna consequat, quis scelerisque est sollicitudin. Nam molestie placerat diam, vel venenatis ex luctus ac. Sed vitae tincidunt est."
         }
     ]
