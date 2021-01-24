@@ -125,9 +125,9 @@ const ItemListContainer = ({}) => {
     );
   } else {
     return (
-      <>
+      <React.Fragment>
         <ItemList items={items}></ItemList>
-      </>
+      </React.Fragment>
     );
   }
 };

@@ -13,19 +13,19 @@ const ContadorContainer = ({ stock }) => {
   };
   if (stock > 0) {
     return (
-      <>
+      <React.Fragment>
         <Producto
           cantidad={cantidad}
           bajarCantidad={bajarCantidad}
           subirCantidad={subirCantidad}
         ></Producto>
-      </>
+      </React.Fragment>
     );
   } else {
     return (
-      <>
+      <React.Fragment>
         <h2>no hay stock lo sentimos mucho</h2>
-      </>
+      </React.Fragment>
     );
   }
 };

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Item = ({ item }) => {
   return (
-    <>
+    <React.Fragment>
       <Card
         className="col-lg-3 col-md-4 col-sm-6 col-12"
         style={{ width: "18rem" }}
@@ -21,7 +21,7 @@ const Item = ({ item }) => {
           </Link>
         </Card.Body>
       </Card>
-    </>
+    </React.Fragment>
   );
 };
 export default Item;

@@ -14,11 +14,11 @@ const ItemDetailContainer = ({ items }) => {
   }, [items]);
 
   return (
-    <>
+    <React.Fragment>
       <ItemDetail key={producto.id} item={producto}>
         {" "}
       </ItemDetail>
-    </>
+    </React.Fragment>
   );
 };
 

@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 const ItemList= ({items}) => {
   const {categoryId}  = useParams() 
   console.log(categoryId)
-    return <> 
+    return <React.Fragment> 
   
       <div className="container-fluid row m-0 p-0 px-3">
       {
@@ -21,7 +21,7 @@ const ItemList= ({items}) => {
  })
      }
      </div>
-  </>
+  </React.Fragment>
   }
   
   export default ItemList 

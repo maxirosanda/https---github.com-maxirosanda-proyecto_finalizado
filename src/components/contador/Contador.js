@@ -3,7 +3,7 @@ import { Button, Col } from "react-bootstrap";
 const Contador = ({ cantidad, bajarCantidad, subirCantidad }) => {
   console.log(cantidad);
   return (
-    <>
+    <React.Fragment>
       <Col
         xs={4}
         md={4}
@@ -56,7 +56,7 @@ const Contador = ({ cantidad, bajarCantidad, subirCantidad }) => {
       >
         <Button>Comprar</Button>
       </Col>
-    </>
+    </React.Fragment>
   );
 };
 

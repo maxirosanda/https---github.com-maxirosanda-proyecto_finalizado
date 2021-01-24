@@ -4,7 +4,7 @@ import "./ItemDetail.css";
 
 const ItemDetail = ({ item }) => {
   return (
-    <>
+    <React.Fragment>
       <Container fluid className="mb-20 mt-5">
         <Row>
           <Col xs={12} lg={6} className="row justify-content-center">
@@ -30,7 +30,7 @@ const ItemDetail = ({ item }) => {
           </Col>
         </Row>
       </Container>
-    </>
+    </React.Fragment>
   );
 };
 export default ItemDetail;
