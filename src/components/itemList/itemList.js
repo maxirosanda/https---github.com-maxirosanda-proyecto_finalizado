@@ -1,5 +1,6 @@
 import Item from '../Item/Item'
 import { useParams } from "react-router-dom";
+
 const ItemList= ({items}) => {
   const {categoryId}  = useParams() 
   console.log(categoryId)
