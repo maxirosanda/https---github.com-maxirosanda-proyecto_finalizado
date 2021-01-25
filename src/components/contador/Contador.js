@@ -1,7 +1,8 @@
-import { Button, Col } from "react-bootstrap";
+import React from 'react'
+import { Button, Col } from "react-bootstrap"
 
 const Contador = ({ cantidad, bajarCantidad, subirCantidad }) => {
-  console.log(cantidad);
+  console.log(cantidad)
   return (
     <React.Fragment>
       <Col
@@ -57,7 +58,7 @@ const Contador = ({ cantidad, bajarCantidad, subirCantidad }) => {
         <Button>Comprar</Button>
       </Col>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default Contador;
+export default Contador

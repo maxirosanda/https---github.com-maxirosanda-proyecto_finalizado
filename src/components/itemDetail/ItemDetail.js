@@ -1,6 +1,7 @@
-import { Container, Row, Col, Image } from "react-bootstrap";
-import ContadorContainer from "../ContadorContainer/ContadorContainer";
-import "./ItemDetail.css";
+import React from 'react'
+import { Container, Row, Col, Image } from "react-bootstrap"
+import ContadorContainer from "../ContadorContainer/ContadorContainer"
+import "./ItemDetail.css"
 
 const ItemDetail = ({ item }) => {
   return (
@@ -31,6 +32,6 @@ const ItemDetail = ({ item }) => {
         </Row>
       </Container>
     </React.Fragment>
-  );
-};
-export default ItemDetail;
+  )
+}
+export default ItemDetail

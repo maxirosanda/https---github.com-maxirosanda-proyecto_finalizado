@@ -1,10 +1,11 @@
-import ItemDetail from "../ItemDetail/ItemDetail";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React from 'react'
+import ItemDetail from "../ItemDetail/ItemDetail"
+import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = ({ items }) => {
-  const { id } = useParams();
-  const [producto, setProducto] = useState({});
+  const { id } = useParams()
+  const [producto, setProducto] = useState({})
 
   useEffect(() => {
     items.length &&
@@ -19,7 +20,7 @@ const ItemDetailContainer = ({ items }) => {
         {" "}
       </ItemDetail>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default ItemDetailContainer;
+export default ItemDetailContainer

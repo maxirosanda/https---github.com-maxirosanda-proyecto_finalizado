@@ -1,11 +1,12 @@
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import "./NavBar.css";
-import CardWidget from "../CardWidget/CardWidget";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Navbar, Nav, NavDropdown } from "react-bootstrap"
+import "./NavBar.css"
+import CardWidget from "../CardWidget/CardWidget"
+import { Link } from "react-router-dom"
 
 const NavBar = () => {
   return (
-    <>
+    <React.Fragment>
       <Navbar bg="dark" variant="dark" fixed="top" expand="lg">
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
@@ -76,8 +77,8 @@ const NavBar = () => {
         <CardWidget className="justify-content-end" />
       </Navbar>
       <div className="separador"></div>
-    </>
-  );
-};
+    </React.Fragment>
+  )
+}
 
-export default NavBar;
+export default NavBar

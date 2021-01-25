@@ -1,10 +1,13 @@
+import React from 'react'
 import Item from '../Item/Item'
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"
 
 const ItemList= ({items}) => {
+  
   const {categoryId}  = useParams() 
   console.log(categoryId)
-    return <React.Fragment> 
+   
+   return <React.Fragment> 
   
       <div className="container-fluid row m-0 p-0 px-3">
       {

@@ -1,12 +1,14 @@
-import "./App.css";
-import NavBar from "./components/Navbar/NavBar";
-import Footer from "./components/Footer/Footer";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import React from 'react'
+import "./App.css"
+import NavBar from "./components/Navbar/NavBar"
+import Footer from "./components/Footer/Footer"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
+import { Switch, Route, BrowserRouter } from "react-router-dom"
 
-function App() {
+const App = () => {
+
   return (
-    <>
+    <React.Fragment>
       <BrowserRouter>
         <NavBar />
         <Switch>
@@ -20,7 +22,7 @@ function App() {
         </Switch>
         <Footer />
       </BrowserRouter>
-    </>
-  );
+    </React.Fragment>
+  )
 }
-export default App;
+export default App

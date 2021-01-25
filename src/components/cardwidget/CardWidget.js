@@ -1,5 +1,6 @@
-import Carrito from "../../assets/CardWidget.png";
-import { Col, Image, Row } from "react-bootstrap";
+import React from 'react'
+import Carrito from "../../assets/CardWidget.png"
+import { Col, Image, Row } from "react-bootstrap"
 
 const CardWidget = () => {
   return (
@@ -10,7 +11,7 @@ const CardWidget = () => {
         </Col>
       </Row>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default CardWidget;
+export default CardWidget

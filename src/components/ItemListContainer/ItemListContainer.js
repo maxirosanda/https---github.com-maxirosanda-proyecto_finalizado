@@ -1,12 +1,13 @@
-import ItemList from "../ItemList/ItemList";
-import { useState, useEffect } from "react";
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
-import { useParams } from "react-router-dom";
+import React from 'react'
+import ItemList from "../ItemList/ItemList"
+import { useState, useEffect } from "react"
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer"
+import { useParams } from "react-router-dom"
 
 const ItemListContainer = ({}) => {
-  const { id } = useParams();
+  const { id } = useParams()
 
-  const [items, setItems] = useState({});
+  const [items, setItems] = useState({})
   const arreglo = [
     {
       id: 0,
@@ -99,36 +100,34 @@ const ItemListContainer = ({}) => {
       descripcion:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ex ac est pulvinar varius. Curabitur sit amet dolor convallis, feugiat ligula sed, mollis dui. Maecenas convallis sapien ut tellus faucibus egestas. Suspendisse laoreet hendrerit mauris id malesuada. Nulla et nisi malesuada, mollis arcu eget, malesuada erat. Etiam est massa, rutrum non purus ut, pharetra dictum sapien. Morbi et condimentum nisl, eu faucibus tellus. Suspendisse sagittis molestie dignissim. Maecenas iaculis leo sed magna rutrum tristique. Curabitur in facilisis ligula. Sed bibendum arcu ut urna consequat, quis scelerisque est sollicitudin. Nam molestie placerat diam, vel venenatis ex luctus ac. Sed vitae tincidunt est.",
     },
-  ];
+  ]
 
   useEffect(() => {
     const findItems = new Promise((resolve) => {
       setTimeout(() => {
-        arreglo.length ? resolve(arreglo) : resolve("no hay items");
-      }, 3000);
-    });
+        arreglo.length ? resolve(arreglo) : resolve("no hay items")
+      }, 3000)
+    })
 
     findItems
       .then((resolve) => {
         return setItems(resolve);
       })
       .catch((erro) => {
-        return erro;
-      });
-  }, []);
+        return erro
+      })
+  }, [])
 
   if (id) {
     return (
-      <>
-        <ItemDetailContainer items={items}></ItemDetailContainer>
-      </>
-    );
+      <ItemDetailContainer items={items}></ItemDetailContainer> 
+    )
   } else {
     return (
       <React.Fragment>
         <ItemList items={items}></ItemList>
       </React.Fragment>
-    );
+    )
   }
-};
-export default ItemListContainer;
+}
+export default ItemListContainer
