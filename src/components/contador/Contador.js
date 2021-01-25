@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Col } from "react-bootstrap"
+import { Button, Col } from 'react-bootstrap'
 
 const Contador = ({ cantidad, bajarCantidad, subirCantidad }) => {
   console.log(cantidad)
@@ -10,9 +10,9 @@ const Contador = ({ cantidad, bajarCantidad, subirCantidad }) => {
         md={4}
         lg={3}
         xl={2}
-        className=" row justify-content-center align-self-center"
+        className=' row justify-content-center align-self-center'
       >
-        <Button onClick={subirCantidad} className="btn btn-light">
+        <Button onClick={subirCantidad} className='btn btn-light'>
           <Col>+</Col>
         </Button>
       </Col>
@@ -21,7 +21,7 @@ const Contador = ({ cantidad, bajarCantidad, subirCantidad }) => {
         md={3}
         lg={3}
         xl={2}
-        className=" row justify-content-center align-self-center"
+        className=' row justify-content-center align-self-center'
       >
         <h2>{cantidad}</h2>
       </Col>
@@ -30,9 +30,9 @@ const Contador = ({ cantidad, bajarCantidad, subirCantidad }) => {
         md={4}
         lg={3}
         xl={2}
-        className=" row justify-content-center align-self-center"
+        className=' row justify-content-center align-self-center'
       >
-        <Button onClick={bajarCantidad} className="btn btn-light">
+        <Button onClick={bajarCantidad} className='btn btn-light'>
           <Col>-</Col>
         </Button>
       </Col>
@@ -42,9 +42,9 @@ const Contador = ({ cantidad, bajarCantidad, subirCantidad }) => {
         md={3}
         lg={3}
         xl={3}
-        className=" my-4 row justify-content-center align-self-center"
+        className=' my-4 row justify-content-center align-self-center'
       >
-        <Button className=" row justify-content-center align-self-center">
+        <Button className=' row justify-content-center align-self-center'>
           Carrito
         </Button>
       </Col>
@@ -53,7 +53,7 @@ const Contador = ({ cantidad, bajarCantidad, subirCantidad }) => {
         md={3}
         lg={3}
         xl={3}
-        className="my-4 row  align-self-center justify-content-center"
+        className='my-4 row  align-self-center justify-content-center'
       >
         <Button>Comprar</Button>
       </Col>
@@ -61,4 +61,4 @@ const Contador = ({ cantidad, bajarCantidad, subirCantidad }) => {
   )
 }
 
-export default Contador
+export default Contador 

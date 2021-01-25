@@ -1,6 +1,6 @@
 import React from 'react'
-import Producto from "../Contador/Contador"
-import { useState } from "react"
+import Producto from '../Contador/Contador'
+import { useState } from 'react'
 
 const ContadorContainer = ({ stock }) => {
   let inicial = 1
