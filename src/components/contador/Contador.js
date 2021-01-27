@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Col } from 'react-bootstrap'
 
-const Contador = ({ cantidad, bajarCantidad, subirCantidad }) => {
+const Contador = ({ cantidad, bajarCantidad, subirCantidad,handleComprar }) => {
   console.log(cantidad)
   return (
     <React.Fragment>
@@ -44,19 +44,11 @@ const Contador = ({ cantidad, bajarCantidad, subirCantidad }) => {
         xl={3}
         className=' my-4 row justify-content-center align-self-center'
       >
-        <Button className=' row justify-content-center align-self-center'>
+        <Button onClick={handleComprar} className=' row justify-content-center align-self-center'>
           Carrito
         </Button>
       </Col>
-      <Col
-        xs={3}
-        md={3}
-        lg={3}
-        xl={3}
-        className='my-4 row  align-self-center justify-content-center'
-      >
-        <Button>Comprar</Button>
-      </Col>
+      
     </React.Fragment>
   )
 }
