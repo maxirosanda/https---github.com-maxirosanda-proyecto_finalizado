@@ -5,6 +5,7 @@ import CardWidget from "../CardWidget/CardWidget"
 import { Link } from "react-router-dom"
 
 const NavBar = () => {
+ 
   return (
     <React.Fragment>
       <Navbar bg="dark" variant="dark" fixed="top" expand="lg">
@@ -74,7 +75,7 @@ const NavBar = () => {
           </Nav>
         </Navbar.Collapse>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <CardWidget className="justify-content-end" />
+        <CardWidget className="justify-content-end" /> 
       </Navbar>
       <div className="separador"></div>
     </React.Fragment>

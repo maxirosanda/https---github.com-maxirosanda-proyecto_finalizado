@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Col } from 'react-bootstrap'
 import { Link } from "react-router-dom"
+
 const ButtonTerminar = () => {
   return (
     <React.Fragment>

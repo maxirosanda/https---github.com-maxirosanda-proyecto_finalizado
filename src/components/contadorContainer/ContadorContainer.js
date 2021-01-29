@@ -1,32 +1,35 @@
-import React from 'react'
+import React , {useState,useContext} from "react"
 import Contador from '../Contador/Contador'
-import { useState } from 'react'
 import ButtonTerminar from '../ButtonTerminar/ButtonTerminar'
+import {CartContext} from '../../CartContext'
 
 const ContadorContainer = ({ stock }) => {
-  let inicial = 1
-  const [cantidad, setCantidad] = useState(inicial);
+  const [cantidad,setCantidad] = useContext(CartContext) 
+  const [cantidadprovisoria,setCantidadprovisoria] = useState(1)
   const [maximo] = useState(stock)
   const [terminar, setTerminar] = useState(false);
   const subirCantidad = () => {
-    cantidad < maximo && setCantidad(cantidad + 1)
+    cantidadprovisoria < maximo && setCantidadprovisoria(cantidadprovisoria + 1)
   }
   const bajarCantidad = () => {
-    cantidad > 1 && setCantidad(cantidad - 1)
+    cantidadprovisoria > 1 && setCantidadprovisoria(cantidadprovisoria - 1)
   }
   const handleComprar = () =>{
   setTerminar(true)
+  setCantidad(cantidadprovisoria)
 
   }
+ 
   if (terminar == false){
   if (stock > 0) {
     return (
       <React.Fragment>
         <Contador
-          cantidad={cantidad}
+          cantidad={cantidadprovisoria}
           bajarCantidad={bajarCantidad}
           subirCantidad={subirCantidad}
           handleComprar={handleComprar}
+
         ></Contador>
       </React.Fragment>
     )
@@ -40,7 +43,7 @@ const ContadorContainer = ({ stock }) => {
 }else{
   return (
     <React.Fragment>  
-<ButtonTerminar></ButtonTerminar>
+<ButtonTerminar ></ButtonTerminar>
 </React.Fragment>
     )
 }
