@@ -1,5 +1,5 @@
 import React from 'react'
-import Item from '../Item/Item'
+import Item from './Item'
 import { useParams } from "react-router-dom"
 
 const ItemList= ({items}) => {

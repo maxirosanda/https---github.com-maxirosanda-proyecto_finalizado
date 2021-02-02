@@ -1,5 +1,5 @@
 import React , {useState,useContext , useEffect} from "react"
-import Contador from '../Contador/Contador'
+import Contador from './Contador'
 import ButtonTerminar from '../Button/ButtonTerminar'
 import ButtonSeguir from '../Button/ButtonSeguir'
 import ButtonRemove from '../Button/ButtonRemove'

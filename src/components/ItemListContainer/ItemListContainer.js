@@ -1,7 +1,7 @@
 import React from 'react'
-import ItemList from "../ItemList/ItemList"
+import ItemList from "../Item/ItemList"
 import { useState, useEffect } from "react"
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer"
+import ItemDetailContainer from "../ItemDetail/ItemDetailContainer"
 import { useParams } from "react-router-dom"
 
 const ItemListContainer = ({}) => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Image } from "react-bootstrap"
-import ContadorContainer from "../ContadorContainer/ContadorContainer"
+import ContadorContainer from "../Contador/ContadorContainer"
 import "./ItemDetail.css"
 
 const ItemDetail = ({ item }) => {
