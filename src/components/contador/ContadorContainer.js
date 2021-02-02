@@ -5,7 +5,7 @@ import ButtonSeguir from '../Button/ButtonSeguir'
 import ButtonRemove from '../Button/ButtonRemove'
 import ButtonClear from '../Button/ButtonClear'
 import {CartContext} from '../../Context'
-
+import { Col,Row } from "react-bootstrap"
 const ContadorContainer = ({ item }) => {
   const [llevar,setLlevar] = useContext(CartContext) 
   const [cantidadprovisoria,setCantidadprovisoria] = useState(1)
@@ -69,11 +69,17 @@ const removeItem = () =>{
   }
 }else{
   return (
-    <React.Fragment>  
+    <React.Fragment>
+<Row>
+ <Col>       
 <ButtonTerminar></ButtonTerminar>
 <ButtonRemove removeItem={removeItem} ></ButtonRemove>
+</Col> 
+<Col>
 <ButtonClear clearItems={clearItems}></ButtonClear>
 <ButtonSeguir ></ButtonSeguir>
+</Col>
+</Row> 
 </React.Fragment>
     )
 }

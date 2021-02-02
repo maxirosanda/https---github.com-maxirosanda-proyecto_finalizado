@@ -13,7 +13,7 @@ const ButtonClear = ({clearItems}) => {
         className=' my-4 row justify-content-center align-self-center'
       >
          <Button onClick={clearItems}  className=' row justify-content-center align-self-center'>
-          Eliminar todos los items
+          Eliminar todos
         </Button>
       </Col>
       

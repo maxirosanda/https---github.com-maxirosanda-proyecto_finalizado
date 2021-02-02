@@ -2,6 +2,7 @@ import React ,{useContext} from 'react'
 import Cart from './Cart'
 import { Table} from "react-bootstrap"
 import {CartContext} from '../../Context'
+import ButtonSeguir from '../Button/ButtonSeguir'
 const ItemList= () => {
 const [llevar,setLlevar] = useContext(CartContext)
 
@@ -27,6 +28,7 @@ const [llevar,setLlevar] = useContext(CartContext)
      
     </tbody>
 </Table>
+<ButtonSeguir ></ButtonSeguir>
   </React.Fragment>
   }
   
