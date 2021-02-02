@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Col } from 'react-bootstrap'
 
 
-const ButtonRemove = ({removeItem}) => {
+const ButtonRemove = ({removeItem,texto}) => {
   return (
     <React.Fragment>
       <Col
@@ -13,7 +13,7 @@ const ButtonRemove = ({removeItem}) => {
         className=' my-4 row justify-content-center align-self-center'
       >
          <Button onClick={removeItem}  className=' row justify-content-center align-self-center'>
-          Remover
+          {texto}
         </Button>
       </Col>
       

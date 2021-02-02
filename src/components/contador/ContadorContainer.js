@@ -72,10 +72,11 @@ const removeItem = () =>{
     <React.Fragment>
 <Row>
  <Col>       
+<ButtonRemove removeItem={removeItem}  texto={"Remover"} ></ButtonRemove>
 <ButtonTerminar></ButtonTerminar>
-<ButtonRemove removeItem={removeItem} ></ButtonRemove>
 </Col> 
 <Col>
+
 <ButtonClear clearItems={clearItems}></ButtonClear>
 <ButtonSeguir ></ButtonSeguir>
 </Col>
