@@ -1,13 +1,22 @@
 import React from 'react'
+import {Image} from "react-bootstrap"
 
-
-const Cart = () => {
+const Cart = ({item , cantidad}) => {
+console.log(item)
+    
   return (
     <React.Fragment>
-  
-      <h1 className="text-center">este es el carrito</h1>
+    <tr>
+      <td>{item.id}</td>
+      <td>{item.name}</td>
+      <td><Image fluid className="rounded" src={item.img}/></td>
+      <td>{item.precio}</td>
+      <td>{cantidad}</td>
+    </tr>  
+
     </React.Fragment>
   )
+      
 }
 
 export default Cart

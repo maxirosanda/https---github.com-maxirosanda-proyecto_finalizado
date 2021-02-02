@@ -70,7 +70,7 @@ const removeItem = () =>{
 }else{
   return (
     <React.Fragment>  
-<ButtonTerminar ></ButtonTerminar>
+<ButtonTerminar></ButtonTerminar>
 <ButtonRemove removeItem={removeItem} ></ButtonRemove>
 <ButtonClear clearItems={clearItems}></ButtonClear>
 <ButtonSeguir ></ButtonSeguir>
