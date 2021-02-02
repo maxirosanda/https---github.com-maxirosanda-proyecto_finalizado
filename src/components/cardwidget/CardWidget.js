@@ -20,7 +20,9 @@ const CardWidget = () => {
       <Row className='row justify-content-end'>
         <Col xs={12} lg={8} className='row justify-content-center'>
           <Image fluid className='rounded' src={Carrito} />
-         <h3>{sumar}</h3>
+        </Col>
+        <Col xs={12} lg={8} className='row justify-content-center'>
+         <h3 style={{ color: "#FFFFFF", textDecoration: "none" }}>{sumar}</h3>
         </Col>
       </Row>
     </React.Fragment>
