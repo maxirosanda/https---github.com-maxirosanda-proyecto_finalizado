@@ -22,7 +22,7 @@ const ItemDetail = ({ item }) => {
                 <h2 className="text-center ">Precio ${item.precio}</h2>
               </Col>
               <Col xs={12} className="my-4  row justify-content-center">
-                <ContadorContainer stock={item.stock}></ContadorContainer>
+                <ContadorContainer item={item} ></ContadorContainer>
               </Col>
             </Row>
           </Col>

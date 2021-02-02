@@ -5,7 +5,8 @@ import Footer from "./components/Footer/Footer"
 import Cart from "./components/Cart/Cart"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import { Switch, Route, BrowserRouter } from "react-router-dom"
-import {Context} from './CartContext'
+import {Context} from './Context'
+
 const App = () => {
 
   return (
