@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
   const [loading,setLoading] = useState(false)
   
   useEffect(() => {
-//setLoading(true)
+setLoading(true)
 const db = getFirestore()
 const itemCollection = db.collection("items")
 const item =itemCollection.doc(id)
@@ -32,7 +32,7 @@ setProducto(
 
   useEffect(()=>{
     console.log("paso por el segundo effect")
-    producto.length && setLoading(false)
+   producto.id != undefined && setLoading(false)
     },[producto])
 
   return <React.Fragment> 
