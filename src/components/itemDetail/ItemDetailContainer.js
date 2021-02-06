@@ -3,39 +3,42 @@ import ItemDetail from "./ItemDetail"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { Spinner } from 'react-bootstrap'
-const ItemDetailContainer = ({ items }) => {
+import {getFirestore} from '../../firebase/index'
+
+const ItemDetailContainer = () => {
   const { id } = useParams()
   const [producto, setProducto] = useState({})
-  const [loading,setLoading] = useState(false)
+ 
+  
   useEffect(() => {
-    
-    items.length &&
-      items.map((item) => {
-        return item.id === parseFloat(id) && setProducto(item);
-      }) 
 
-  }, [items])
+const db = getFirestore()
+const itemCollection = db.collection("items")
+const item =itemCollection.doc(id)
+item.get()
+.then((doc)=>{
   
-  useEffect(()=>{
-    items.length ? setLoading(false) : setLoading(true)
-    },[items])
+setProducto(
+  {
+    id: doc.id,
+    ...doc.data()
+  }
+)
+}
+).catch((erro) => {
+  return erro
+})
+  },[])
 
-  return <React.Fragment>
-    {
-      loading ? (
-        <Spinner animation="border" role="status"/>
 
-      ):(
-        <ItemDetail key={producto.id} item={producto}/>
-      )
-       
-
-     }
-    
+  return <React.Fragment> 
       
-      
-    </React.Fragment>
-  
+<div className="container-fluid row m-0 p-0 px-3">
+
+      <ItemDetail key={producto.id} item={producto}/>
+
+</div>
+</React.Fragment>
 }
 
 export default ItemDetailContainer

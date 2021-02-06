@@ -25,42 +25,42 @@ const NavBar = () => {
               <Link
                 style={{ color: "#232020", textDecoration: "none" }}
                 className="link dropdown-item"
-                to={"/category/1"}
+                to={"/category/O40wvPb7MeGYX1PPQCFG"}
               >
                 Motherboard
               </Link>
               <Link
                 style={{ color: "#232020", textDecoration: "none" }}
                 className="link dropdown-item"
-                to={"/category/2"}
+                to={"/category/6nwoFFrO7tsCTxrBZIto"}
               >
                 Procesadores
               </Link>
               <Link
                 style={{ color: "#232020", textDecoration: "none" }}
                 className="link dropdown-item"
-                to={"/category/3"}
+                to={"/category/xMgFdtcvtj5NkCJ6LANz"}
               >
                 Placa de video
               </Link>
               <Link
                 style={{ color: "#232020", textDecoration: "none" }}
                 className="link dropdown-item"
-                to={"/category/4"}
+                to={"/category/AmRZb3mvSS7zK3gTLzP8"}
               >
                 Fuentes
               </Link>
               <Link
                 style={{ color: "#232020", textDecoration: "none" }}
                 className="link dropdown-item"
-                to={"/category/5"}
+                to={"/category/3DSPFygPfYAvz3hVqi44"}
               >
                 Gabinetes
               </Link>
               <Link
                 style={{ color: "#232020", textDecoration: "none" }}
                 className="link dropdown-item"
-                to={"/category/6"}
+                to={"/category/bH1XcvVJoUtsUKyyT0YQ"}
               >
                 Discos de almacenamiento
               </Link>
