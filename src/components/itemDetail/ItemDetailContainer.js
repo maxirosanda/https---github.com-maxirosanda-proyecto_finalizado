@@ -31,7 +31,6 @@ setProducto(
   },[])
 
   useEffect(()=>{
-    console.log("paso por el segundo effect")
    producto.id != undefined && setLoading(false)
     },[producto])
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Col } from 'react-bootstrap'
 
 const Contador = ({ cantidad, bajarCantidad, subirCantidad,addItem }) => {
-  console.log(cantidad)
+
   return (
     <React.Fragment>
       <Col
