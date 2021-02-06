@@ -7,9 +7,11 @@ const ItemList= () => {
 const [llevar,setLlevar] = useContext(CartContext)
 const [sumar,setSumar] = useState(0)
 useEffect(() => {
+  setSumar(0)
   llevar.length &&
-    llevar.filter((itenes) => {
-      setSumar(sumar + itenes.item.precio * itenes.cantidad)
+    llevar.map((itenes) => {
+      setSumar((sumar)=>{ 
+        return sumar + itenes.item.precio * itenes.cantidad})
     })
 }, [llevar])
 

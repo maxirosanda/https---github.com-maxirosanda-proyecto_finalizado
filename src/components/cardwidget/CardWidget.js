@@ -11,7 +11,7 @@ const CardWidget = () => {
       setSumar(0)
       llevar.length &&
         llevar.map((itenes) => {
-          setSumar(sumar + itenes.cantidad)
+          setSumar((sumar) => {return sumar + itenes.cantidad})
         })
     }, [llevar])
 

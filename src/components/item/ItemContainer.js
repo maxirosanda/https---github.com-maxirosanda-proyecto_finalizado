@@ -19,7 +19,7 @@ const ItemList= () => {
               ...doc.data()
             })
           })
-          console.log("arrayitems",arrayItems)
+
           setItems(arrayItems)
       }).catch((erro) => {
         return erro

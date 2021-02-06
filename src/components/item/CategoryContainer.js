@@ -18,7 +18,14 @@ const CategoryContainer = ({}) => {
   categoryItems.get()
     .then((querySnapshot)=>{
         querySnapshot.size === 0 && console.log("no hay items")
-        setItems(querySnapshot.docs.map(doc =>doc.data()))
+        let arrayItems =querySnapshot.docs.map((doc)=>{
+          return({
+            id: doc.id,
+            ...doc.data()
+          })
+        })
+        
+        setItems(arrayItems)
     }).catch((erro) => {
       return erro
     })
