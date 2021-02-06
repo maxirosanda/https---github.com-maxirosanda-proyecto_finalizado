@@ -11,6 +11,7 @@ const CategoryContainer = ({}) => {
  const [loading,setLoading] = useState(false) 
 
   useEffect(() => {
+  setLoading(true)  
   let db =getFirestore()
   let itemsFirebase =db.collection("items")
   let categoryItems = itemsFirebase.where("categoria_id","==",categoryid)
@@ -32,7 +33,7 @@ const CategoryContainer = ({}) => {
     },[categoryid])
 
     useEffect(()=>{
-      items.length ? setLoading(false) : setLoading(true)
+      items.length && setLoading(false)
       },[items])
 
     return (

@@ -8,6 +8,7 @@ const ItemList= () => {
   const [items, setItems] = useState({})
 
   useEffect(() => {
+    setLoading(true)
     let db =getFirestore()
     let itemsFirebase =db.collection("items")
     itemsFirebase.get()
@@ -27,7 +28,7 @@ const ItemList= () => {
       },[])
    
   useEffect(()=>{
-    items.length ? setLoading(false) : setLoading(true)
+    items.length && setLoading(false) 
     },[items])
 
   return <React.Fragment> 
