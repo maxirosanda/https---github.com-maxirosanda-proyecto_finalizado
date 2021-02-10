@@ -1,20 +1,12 @@
 import React, {useContext, useState ,useEffect} from 'react'
 import Carrito from '../../assets/CardWidget.png'
 import { Col, Image, Row } from 'react-bootstrap'
-import {CartContext} from '../../Context'
+import {useCartContext} from '../../Context'
 import {Link} from 'react-router-dom'
 const CardWidget = () => {
-  const [llevar,setLlevar] = useContext(CartContext)
-  const [sumar,setSumar] = useState(0);
   
-    useEffect(() => {
-      setSumar(0)
-      llevar.length &&
-        llevar.map((itenes) => {
-          setSumar((sumar) => {return sumar + itenes.cantidad})
-        })
-    }, [llevar])
-
+  const {llevar,sumar }= useCartContext()
+ 
   return (
     <React.Fragment>
       <Row className='row justify-content-end'>

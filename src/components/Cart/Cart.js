@@ -1,26 +1,20 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import {Image} from "react-bootstrap"
-import {CartContext} from '../../Context'
-import ButtonRemove from '../Button/ButtonRemove'
+import {useCartContext} from '../../Context'
+import ButtonFuncion from '../Button/Button'
 const Cart = ({item , cantidad}) => {
-
-const [llevar,setLlevar] = useContext(CartContext)
-
-
-const removeItem = () =>{
-  const newItem = llevar.filter((itenes) => itenes.item.id !== item.id )
-  setLlevar(newItem)
-  }   
-
+  
+  const {removeItem} = useCartContext() 
+  
   return (
     <React.Fragment>
     <tr>
       <td>{item.id}</td>
-      <td>{item.name}</td>
+      <td>{item.nombre}</td>
       <td><Image fluid className="rounded" src={item.img}/></td>
       <td>{item.precio}</td>
       <td>{cantidad}</td>
-      <td><ButtonRemove removeItem={removeItem}  texto={"Remover"} ></ButtonRemove></td>
+      <td><ButtonFuncion funcionClick={() =>{removeItem(item.id)}}  texto={"Remover"} ></ButtonFuncion></td>
     </tr>  
 
     </React.Fragment>

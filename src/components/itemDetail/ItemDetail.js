@@ -1,11 +1,15 @@
 import React from 'react'
 import { Container, Row, Col, Image } from "react-bootstrap"
-import ContadorContainer from "../Contador/ContadorContainer"
 import "./ItemDetail.css"
+import ButtonFuncion from '../Button/Button'
+import ButtonLink from '../Button/ButtonLink'
+import ContadorContainer from "../Contador/ContadorContainer"
+import {useCartContext} from '../../Context'
 
 const ItemDetail = ({ item }) => {
-  return (
-    <React.Fragment>
+  const {removeItem,clearItems,terminar} = useCartContext()
+  
+  return  <React.Fragment>
       <Container fluid className="mb-20 mt-5">
         <Row>
           <Col xs={12} lg={6} className="row justify-content-center">
@@ -20,18 +24,30 @@ const ItemDetail = ({ item }) => {
             <Row>
               <Col xs={12} className="mt-4">
                 <h2 className="text-center ">Precio ${item.precio}</h2>
-              </Col>
-              <Col xs={12} className="my-4  row justify-content-center">
-                <ContadorContainer item={item} ></ContadorContainer>
-              </Col>
+                </Col>
             </Row>
           </Col>
           <Col xs={12} lg={6} className="text-center">
             {item.descripcion}
           </Col>
-        </Row>
+        
+            {
+              terminar ? (
+                <>
+                <ButtonFuncion funcionClick={()=>{removeItem(item.id)}}  texto={"Remover"} />
+                <ButtonLink texto="Terminar" link="/cart" />
+                <ButtonFuncion funcionClick={clearItems}  texto={"Borrar todos"} />
+                </>
+              ):(
+
+                <ContadorContainer item={item} />
+              )
+            }
+             <ButtonLink texto="Seguir comprando" link="./" />
+          </Row>
+       
       </Container>
     </React.Fragment>
-  )
+  
 }
 export default ItemDetail

@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Col } from 'react-bootstrap'
 
 
-const ButtonClear = ({clearItems}) => {
+const ButtonFuncion = ({texto , funcionClick}) => {
   return (
     <React.Fragment>
       <Col
@@ -12,8 +12,8 @@ const ButtonClear = ({clearItems}) => {
         xl={3}
         className=' my-4 row justify-content-center align-self-center'
       >
-         <Button onClick={clearItems}  className=' row justify-content-center align-self-center'>
-          Eliminar todos
+         <Button onClick={funcionClick}  className=' row justify-content-center align-self-center'>
+         {texto}
         </Button>
       </Col>
       
@@ -22,4 +22,4 @@ const ButtonClear = ({clearItems}) => {
 
 }
 
-export default ButtonClear
+export default ButtonFuncion

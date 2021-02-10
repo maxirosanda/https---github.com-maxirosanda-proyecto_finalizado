@@ -1,6 +1,6 @@
 import React from 'react'
-import { Card, Button } from "react-bootstrap"
-import { Link } from "react-router-dom"
+import { Card } from "react-bootstrap"
+import ButtonLink from '../Button/ButtonLink'
 
 const Item = ({ key , item }) => {
 
@@ -17,10 +17,7 @@ const Item = ({ key , item }) => {
             El precio del producto es de $ {item.precio} y puede abonarlo en 18
             cuotas sin interes con todas las tarjetas de credito
           </Card.Text>
-          <Link to={`/item/${item.id}`}>
-            {" "}
-            <Button variant="primary">Comprar</Button>
-          </Link>
+          <ButtonLink texto='Comprar' link={`/item/${item.id}`}></ButtonLink>
         </Card.Body>
       </Card>
     </React.Fragment>

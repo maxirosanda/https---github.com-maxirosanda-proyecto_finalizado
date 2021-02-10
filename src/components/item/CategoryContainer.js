@@ -1,6 +1,5 @@
-import React from 'react'
+import React , { useState, useEffect } from 'react'
 import Item from "./Item"
-import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import {getFirestore} from '../../firebase/index'
 import {Spinner} from 'react-bootstrap'
