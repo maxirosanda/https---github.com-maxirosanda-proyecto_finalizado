@@ -12,11 +12,11 @@ const ItemDetail = ({ item }) => {
   return  <React.Fragment>
       <Container fluid className="mb-20 mt-5">
         <Row>
-          <Col xs={12} lg={6} className="row justify-content-center">
+          <Col xs={12} lg={5} className="row justify-content-center">
             <Image fluid className="rounded" src={item.img} />
           </Col>
           <Col xs={12} lg={6} className=" align-self-center">
-            <h2 className="text-center"> {item.name}</h2>
+            <h2 className="text-center"> {item.nombre}</h2>
           </Col>
         </Row>
         <Row>
@@ -30,7 +30,8 @@ const ItemDetail = ({ item }) => {
           <Col xs={12} lg={6} className="text-center">
             {item.descripcion}
           </Col>
-        
+          </Row>
+          <Row>
             {
               terminar ? (
                 <>
@@ -40,12 +41,11 @@ const ItemDetail = ({ item }) => {
                 </>
               ):(
 
-                <ContadorContainer item={item} />
+              <ContadorContainer item={item} />
               )
             }
              <ButtonLink texto="Seguir comprando" link="./" />
-          </Row>
-       
+          </Row> 
       </Container>
     </React.Fragment>
   

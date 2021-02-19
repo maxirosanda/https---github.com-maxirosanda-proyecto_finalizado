@@ -9,14 +9,13 @@ const Cart = ({item , cantidad}) => {
   return (
     <React.Fragment>
     <tr>
-      <td>{item.id}</td>
+      <td>{item.id}  <ButtonFuncion funcionClick={() =>{removeItem(item.id)}}  texto={"Remover"} ></ButtonFuncion></td>
       <td>{item.nombre}</td>
       <td><Image fluid className="rounded" src={item.img}/></td>
       <td>{item.precio}</td>
-      <td>{cantidad}</td>
-      <td><ButtonFuncion funcionClick={() =>{removeItem(item.id)}}  texto={"Remover"} ></ButtonFuncion></td>
+      <td>{cantidad} </td>
     </tr>  
-
+   
     </React.Fragment>
   )
       

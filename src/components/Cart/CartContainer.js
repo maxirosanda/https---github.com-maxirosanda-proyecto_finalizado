@@ -1,7 +1,7 @@
 import React ,{useState}  from 'react'
 import Cart from './Cart'
 import Formulario from './Formulario'
-import { Table} from "react-bootstrap"
+import { Table,Container,Spinner} from "react-bootstrap"
 import {useCartContext} from '../../Context'
 import ButtonLink from '../Button/ButtonLink'
 import {getFirestore} from '../../firebase/index'
@@ -9,14 +9,16 @@ import ButtonFuncion from '../Button/Button'
 
 const CartContainer= () => {
 
-const {llevar,preciofinal,setLlevar,nombre,setNombre,setTel,tel,setEmail,email} = useCartContext()
+const {llevar,preciofinal,setLlevar,userDatos,setUserDatos} = useCartContext()
 const [orden ,setOrden] = useState(null)
 const [ordenid ,setOrdenid] = useState('')
+const [loading,setLoading] = useState(false)
 var d = new Date();
 
 
 
 const confirmarCompra = () => {
+setLoading(true)  
 const db =getFirestore()
 const ordenDb = db.collection("orders")
 ordenDb.add(orden)
@@ -40,7 +42,7 @@ ordenDb.add(orden)
         
       }).catch((erro) => {
         return erro
-      })
+      }).finally(setLoading(false))
 
     
      
@@ -53,27 +55,17 @@ console.log("ocurrio el error :" , e)
 
 
 const tomandoDatos = (e) =>{
-
-  if (e.target.name=="nombre"){
-  setNombre(e.target.value)
-}
-
-if (e.target.name=="tel"){
-  setTel(e.target.value)
-}
-if (e.target.name=="email"){
-  setEmail(e.target.value)
-}
+setUserDatos({...userDatos,[e.target.name]: e.target.value})
 
 }
 
 
 const clickFormulario = (e) => {
   e.preventDefault()
-  setOrden( { buyer: {nombre: nombre,
-                      telefono: tel,
-                      email: email
-            },
+  setOrden( { buyer: {nombre: userDatos.nombre,
+                      telefono: userDatos.tel,
+                      email: userDatos.email
+                      },
               items: llevar,
               date: `${d.getDate()} / ${1 + d.getMonth()} / ${ d.getFullYear()}`,
              total: preciofinal
@@ -82,8 +74,11 @@ const clickFormulario = (e) => {
 }
 
 
-   return <React.Fragment> 
+   return <React.Fragment>
+     <Container> 
   {
+
+    
      !ordenid  && (
   <Table striped bordered hover>
   <thead>
@@ -93,7 +88,6 @@ const clickFormulario = (e) => {
       <th>Foto</th>
       <th>Precio</th>
       <th>Cantidad</th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -102,12 +96,20 @@ const clickFormulario = (e) => {
     
     llevar.length ? (  llevar.map((itenes) => {
         return   <Cart  item = {itenes.item} cantidad={itenes.cantidad} > </Cart>}) )
-         : (  <h2>No hay items en el carrito</h2> )
+         : (  
+         
+            loading ? (    
+           <Spinner animation="border" role="status"/>
+      
+            ):(  
+              <h2>No hay items en el carrito</h2> )
+         
+         )
           
 
     }
     <tr>
-      Precio Final del Carrito : 
+      Precio Final : 
        {preciofinal}   
     </tr>
     </tbody>
@@ -121,8 +123,8 @@ const clickFormulario = (e) => {
 
 }
 
-{ordenid && <h2>{ordenid}</h2>}
-
+{ordenid && <h3>Su compra fue procesada con el numero de orden: {ordenid}</h3>}
+</Container>
   </React.Fragment>
   }
   

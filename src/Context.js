@@ -8,9 +8,7 @@ const [llevar,setLlevar] = useState([])
 const [sumar,setSumar] = useState(0);
 const [terminar, setTerminar] = useState(false)
 const [preciofinal,setPreciofinal] = useState(0)
-const [nombre,setNombre] = useState("")
-const [tel,setTel] = useState(0)
-const [email,setEmail] = useState("")
+const [userDatos, setUserDatos] = useState("")
 
 useEffect(() => {
   setPreciofinal(0)
@@ -50,7 +48,7 @@ const removeItem = (id) =>{
          
  
     return (
-     <CartContext.Provider value={{llevar,setLlevar,sumar,addItem,removeItem,clearItems,terminar,setTerminar,preciofinal,setPreciofinal,nombre,setNombre,tel,setTel,email,setEmail}}>
+     <CartContext.Provider value={{llevar,setLlevar,sumar,addItem,removeItem,clearItems,terminar,setTerminar,preciofinal,setPreciofinal,userDatos,setUserDatos}}>
             {children}
      </CartContext.Provider>
      )
